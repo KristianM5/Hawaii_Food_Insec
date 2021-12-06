@@ -1,0 +1,14 @@
+import pandas as pd 
+import matplotlib.pyplot as plt
+import numpy as np 
+from sklearn import datasets, linear_model 
+import seaborn as sns
+
+df = pd.read_csv(r"DataHolder/Food_Insecurity_Index_Site_Region.csv")
+
+print(df)
+
+plt.rcParams.update({'figure.figsize':(10,8), 'figure.dpi':100})
+sns.lmplot(x='Zip Code', y='Index', data=df)
+plt.title("Index Of All HI State Zip Code");
+plt.show()
